@@ -1,5 +1,6 @@
-/venv
+﻿/venv
 /.idea
 /__pycache__
 /imgs
 /__Архив__
+/.git
