@@ -1,6 +1,8 @@
-﻿/venv
+﻿# Python files
+/venv
 /.idea
-/__pycache__
+**/__pycache__
+
+# Images
 /imgs
-/__Архив__
-/.git
+/src/__archive__
