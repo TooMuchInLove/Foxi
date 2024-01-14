@@ -1,11 +1,11 @@
 from dataclasses import dataclass
 
 # Ставим игру на паузу;
-IS_PAUSE = False
+is_pause = False
 # Запуск игры;
-IS_GAME = True
+is_game = True
 # Вызов меню игры;
-IS_MENU = True
+is_menu = True
 
 # Отрисовка каждые 0.1 сек;
 FPS = 100
