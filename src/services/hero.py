@@ -16,7 +16,7 @@ class Hero(AbstractCharacter, MixinAnimationSleep, MixinAnimationStop, MixinAnim
         self.__w = w
         self.__h = h
         self.__hero = sprites
-        # self.__begin_time = time()  # Таймер;
+        self.__begin_time = time()  # Таймер;
         # self.__timer = GameTimer()  # Таймер;
         self.__count = 0  # Счётчик для смены изображений;
         self.__is_flip = False  # Смена направления движения;
