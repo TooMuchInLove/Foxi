@@ -1,9 +1,9 @@
 from time import time
-from services import IStationary
+from abstracts import AbstractStationary
 from config import LEVEL_POSITION_OBJECT, SPRITE_SIZE
 
 
-class Stationary(IStationary):
+class Stationary(AbstractStationary):
     """ . """
     __slots__ = ("__screen", "__w", "__h", "__obj", "__begin_time", "__count", "animation",)
 
@@ -26,19 +26,20 @@ class Stationary(IStationary):
             self.__count = 0
             self.__begin_time = time()
 
-    def get_size(self) -> tuple[int, int]:
-        """ Получаем размер изображения неподвижного объекта """
-        return self.__obj[SPRITE_SIZE][self.animation]
-
     def draw(self) -> None:
         """ Отрисовка неподвижного объекта """
         # Смена изображения (позволяет анимировать объект);
         if self.__count >= len(self.__obj[self.animation]):
             self.__count = 0
-        _, h = self.get_size()
+        _, h = self.size
         # Отрисовка различных анимаций bush;
         self.__screen.blit(
             self.__obj[self.animation][self.__count],
             (self.__w, self.__h - h - LEVEL_POSITION_OBJECT)
         )
         self.__count += 1
+
+    @property
+    def size(self) -> tuple[int, int]:
+        """ Получаем размер изображения неподвижного объекта """
+        return self.__obj[SPRITE_SIZE][self.animation]

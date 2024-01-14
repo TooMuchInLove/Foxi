@@ -1,8 +1,7 @@
-from .engine import *
-from .objects import *
-from .timer import *
-from .stationary import *
 from .services import *
+from .engine import *
+from .stationary import *
+from .hero import *
+from .timer import *
 
-__all__ = ("IObject", "ICharacter", "IStationary", "Engine", "Window",
-		   "GameTimer", "Stationary", "loading_sprites",)
+__all__ = ("Engine2D", "Hero", "GameTimer", "Stationary", "loading_sprites",)
