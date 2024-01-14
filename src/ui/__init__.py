@@ -1,5 +1,5 @@
 from .button import *
 from .menu import *
-from .fox import *
+from .windows import *
 
-__all__ = ("ButtonApp", "MenuApp", "HeroFox",)
+__all__ = ("ButtonApp", "MenuApp", "Window",)
